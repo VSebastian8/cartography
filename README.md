@@ -1,2 +1,3 @@
 # cartography
-various maps from the cartography course
+
+A collection of maps I'm proud of: https://vsebastian8.github.io/cartography/
