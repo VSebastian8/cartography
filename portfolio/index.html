@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cartography Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1><b>Cartography Portfolio</b></h1>
+    <div class="card">
+      <div>
+        This humble interactive web page has the distinct honor of presenting my
+        final project for this course, along with the rocky road it took to get
+        there.
+      </div>
+      <br />
+      <div>
+        Contents:
+        <ul>
+          <li>Cartographic Reflection</li>
+          <li>Project Introduction</li>
+          <li>Data Exploration</li>
+          <li>Plot Twist</li>
+          <li>Final Map</li>
+        </ul>
+      </div>
+    </div>
+    <h2>Cartographic Reflection</h2>
+    <div class="card">
+      <p>
+        At the beginning of the course, I didn't have much previous experience
+        with map making. Beyond the analytical skills I've developed since then,
+        I feel like my confidence has grown quite a lot regarding the technical
+        aspects of cartography. Simply put, creating beautiful maps seems way
+        more possible now.
+      </p>
+      <p>
+        Each week I've learned various interesting aspects of cartography that
+        I'd never considered before. This is the first map I made for this
+        course:
+      </p>
+    </div>
+    <img class="asset" src="../exercise1/maps/map6.png" />
+    <div class="card">
+      <p>
+        I still really like this map. I think the layout works well for visual
+        hierarchy, the colours pop nicely, the serif font gives a professional
+        feel, and the story of inter-connectedness shines through.
+      </p>
+      <p>
+        There are, of course, things that could be changed. I have created a
+        version with geodesic lines, but I think the improvement is marginal.
+        Edge bundling may help with the clutter of lines, but the real untapped
+        potential comes from interactivity. It would be great to be able to
+        click on each Finnish airport for more information and further route
+        highlighting. This version would probably require a dynamic zoom on
+        Finland so the airports are farther apart. I think the storytelling
+        aspect would also be improved by such interactivity as the map would
+        better display each airport's role in connecting Finland to the rest of
+        the world.
+      </p>
+      <p>
+        After trying and failing to implement this type of clicking interaction
+        using python, I came to the conclusion that something like javascript
+        would be better suited for this task. As I'm more interested in
+        beautiful visualization than in GIS, I think learning cartography in js
+        will be a great next step for my personal journey. Also, there are many
+        cool maps I've seen in this course that I've yet to implement myself. I
+        really think this course has helped me identify relevant map elements
+        and I've developed a better sense for making cartographic decisions, so
+        I can't wait to make more maps on my own!
+      </p>
+    </div>
+    <h2>Project Introduction</h2>
+    <div class="card">About the data source and maps</div>
+    <h2>Data Exploration</h2>
+    <div class="card">Interesting aspects</div>
+    <div class="asset">
+      <img src="./assets/exploratory_map.png" />
+      <img src="./assets/edgebundled_map.png" />
+    </div>
+    <img class="asset" src="./assets/distances_hist.png" />
+    <div class="card">
+      This brings us to the first map we can gleam some relevant information
+      from:
+    </div>
+    <img class="asset" src="./maps/distances_km.png" />
+    <h2>Plot Twist</h2>
+    <div class="card">
+      <p>
+        Every good story has a plot twist and so is the case for this
+        portfolio's narrative, although this twist was spoiled at the beginning
+        by the page contents. We've seen the data and what it has to offer, so
+        the path to the final version seems straightforward. However, there is
+        one more wrinkle in that path, a new idea that further complicates
+        things.
+      </p>
+      <p>
+        What if we played with the geographical area itself? After all, what
+        could be more twisty in the cartographic world than a cartogram?
+      </p>
+    </div>
+    <h2>Final Map</h2>
+    <h2>Thank you for reading!</h2>
+  </body>
+</html>
