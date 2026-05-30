@@ -47,3 +47,20 @@ img {
   margin-top: 3vh;
   margin-bottom: 3vh;
 }
+
+#line1,
+#line2 {
+  position: absolute;
+  top: 0;
+  width: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+#line1 {
+  left: 10vw;
+  border-left: 3px dashed #a7bc5b;
+}
+#line2 {
+  left: 90vw;
+  border-right: 3px dashed #a7bc5b;
+}

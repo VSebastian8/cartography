@@ -8,7 +8,22 @@
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="index.css" />
   </head>
+
   <body>
+    <div id="line1"></div>
+    <div id="line2"></div>
+    <script>
+      const line1 = document.getElementById("line1");
+      const line2 = document.getElementById("line2");
+
+      function updateHeight() {
+        line1.style.height = document.documentElement.scrollHeight + "px";
+        line2.style.height = document.documentElement.scrollHeight + "px";
+      }
+
+      window.addEventListener("load", updateHeight);
+      window.addEventListener("resize", updateHeight);
+    </script>
     <h1><b>Cartography Portfolio</b></h1>
     <div class="card">
       <div>
@@ -82,12 +97,30 @@
       <img src="./assets/exploratory_map.png" />
       <img src="./assets/edgebundled_map.png" />
     </div>
-    <img class="asset" src="./assets/distances_hist.png" />
+    <div class="card"></div>
+    <iframe
+      class="asset"
+      style="width: 60vw; height: 60vh"
+      src="./assets/distances_interactive_hist.html"
+    >
+    </iframe>
     <div class="card">
       This brings us to the first map we can gleam some relevant information
       from:
     </div>
     <img class="asset" src="./maps/distances_km.png" />
+    <div class="card">Countries</div>
+    <iframe
+      class="asset"
+      style="width: 915px; height: 716px"
+      src="./assets/origin_country_pie.html"
+    ></iframe>
+    <iframe
+      class="asset"
+      style="width: 915px; height: 716px; margin-top: 0"
+      src="./assets/destination_country_pie.html"
+    ></iframe>
+    <div class="card">Quite a big difference</div>
     <h2>Plot Twist</h2>
     <div class="card">
       <p>
@@ -104,6 +137,7 @@
       </p>
     </div>
     <h2>Final Map</h2>
+    <div class="card"></div>
     <h2>Thank you for reading!</h2>
   </body>
 </html>
