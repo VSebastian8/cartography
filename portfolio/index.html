@@ -81,7 +81,7 @@
         After trying and failing to implement this type of clicking interaction
         using python, I came to the conclusion that something like javascript
         would be better suited for this task. As I'm more interested in
-        beautiful visualization than in GIS, I think learning cartography in js
+        beautiful visualizations than in GIS, I think learning cartography in js
         will be a great next step for my personal journey. Also, there are many
         cool maps I've seen in this course that I've yet to implement myself. I
         really think this course has helped me identify relevant map elements
@@ -90,14 +90,39 @@
       </p>
     </div>
     <h2>Project Introduction</h2>
-    <div class="card">About the data source and maps</div>
+    <div class="card">
+      <p>
+        In this project, I will be working with Erasmus mobility data from
+        <a
+          href="https://data.europa.eu/data/datasets/erasmus-mobility-raw-data?locale=en"
+          >here</a
+        >, restricted to Europe. As an international student, this dataset is
+        particularly interesting to me. I believe these mobilities are a form of
+        culture sharing among the participating countries. This project explores
+        several aspects of this dataset, with a focus on country-level
+        statistics.
+      </p>
+      <p>Without further ado, let's dive into it!</p>
+    </div>
     <h2>Data Exploration</h2>
-    <div class="card">Interesting aspects</div>
+    <div class="card">
+      As a starting point, I simply plotted the connection's between
+      universities on top of a base map. Reducing the line weight and opacity
+      helped with the clutter, but there's not much one can gleam from this
+      first map aside from the fact that the data is spread across all of
+      Europe. I have tried edge bundling as well, but it doesn'prevent the
+      hairball effect.
+    </div>
     <div class="asset">
       <img src="./assets/exploratory_map.png" />
       <img src="./assets/edgebundled_map.png" />
     </div>
-    <div class="card"></div>
+    <div class="card">
+      One thing we can easily calculate is each line's distance. This might
+      signal whether countries are more likely to have connections with their
+      neighbours. Let's visualize this distribution in the form of an
+      interactive histogram:
+    </div>
     <iframe
       class="asset"
       style="width: 60vw; height: 60vh"
@@ -105,11 +130,19 @@
     >
     </iframe>
     <div class="card">
+      As expected, long connections are rare, but the neighbour clustering is
+      not so extreme since there's quite some variation between 0 and 2000 km.
       This brings us to the first map we can gleam some relevant information
       from:
     </div>
     <img class="asset" src="./maps/distances_km.png" />
-    <div class="card">Countries</div>
+    <div class="card">
+      These lines don't express the origin-destination idea that well, and, more
+      importantly, it's not clear how connected each individual country is.
+      After doing some spatial joins, we can attribute an origin and destination
+      country to each line. This allows us to count the mobilities of each
+      country. Let's first display these stats as interactive pie charts:
+    </div>
     <iframe
       class="asset"
       style="width: 915px; height: 716px"
@@ -121,9 +154,15 @@
       src="./assets/destination_country_pie.html"
     ></iframe>
     <div class="card">
-      Quite a big difference. Let's see also take a look at a chord diagram that
-      shows the relations between countries. For clarity, only the top 9
-      countries by total mobilities are shown explicitly.
+      <p>
+        Quite a big difference! We can clearly see how popular Germany is for
+        Erasmus students and how the "big 5" countries dominate both charts.
+      </p>
+      <p>
+        Let's see also take a look at a chord diagram that shows the relations
+        between countries. For clarity, only the top 9 countries by total
+        mobilities are shown explicitly.
+      </p>
     </div>
     <img class="asset" src="./assets/mobilities_chord.png" />
     <div class="card">
@@ -151,6 +190,15 @@
         What if we played with the geographical area itself? After all, what
         could be more twisty in the cartographic world than a cartogram?
       </p>
+    </div>
+    <img class="asset" src="./maps/countries_cartogram.png" />
+    <div class="card">
+      A cartogram is also great from a storytelling perspective, since it
+      emphasizes the interesting aspects of the data in a very engaging visual
+      way (especially for viewers familiar with the map of Europe). As far as
+      visual hierarchy goes, Germany really draws the eye now, followed by the
+      other literally big countries, and finally the small countries, title, and
+      legend.
     </div>
     <h2>Final Map</h2>
     <div class="card"></div>
