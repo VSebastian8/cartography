@@ -96,11 +96,14 @@
         <a
           href="https://data.europa.eu/data/datasets/erasmus-mobility-raw-data?locale=en"
           >here</a
-        >, restricted to Europe. As an international student, this dataset is
-        particularly interesting to me. I believe these mobilities are a form of
-        culture sharing among the participating countries. This project explores
-        several aspects of this dataset, with a focus on country-level
-        statistics.
+        >, restricted to Europe. The data is in the EPSG:3035 projection, which
+        is perfect for Europe-scale maps.
+      </p>
+      <p>
+        As an international student, this dataset is particularly interesting to
+        me. I believe these mobilities are a form of culture sharing among the
+        participating countries. This project explores several aspects of this
+        dataset, with a focus on country-level statistics.
       </p>
       <p>Without further ado, let's dive into it!</p>
     </div>
@@ -193,15 +196,58 @@
     </div>
     <img class="asset" src="./maps/countries_cartogram.png" />
     <div class="card">
-      A cartogram is also great from a storytelling perspective, since it
-      emphasizes the interesting aspects of the data in a very engaging visual
-      way (especially for viewers familiar with the map of Europe). As far as
-      visual hierarchy goes, Germany really draws the eye now, followed by the
-      other literally big countries, and finally the small countries, title, and
-      legend.
+      <p>
+        A cartogram is also great from a storytelling perspective, since it
+        emphasizes the interesting aspects of the data in a very engaging visual
+        way (especially for viewers familiar with the map of Europe). As far as
+        visual hierarchy goes, Germany really draws the eye now, followed by the
+        other literally big countries, and finally the small countries, title,
+        and legend.
+      </p>
+      <p>
+        As an aside, since this map looks great in a monochromatic view, it
+        means it is highly accessible for all kinds of colorblindness!
+      </p>
     </div>
+    <img
+      class="asset"
+      src="./maps/cartogram_monochromatic.png"
+      style="margin-bottom: 0"
+    />
     <h2>Final Map</h2>
-    <div class="card"></div>
+    <div class="card">
+      <p>
+        I strongly believe maps should speak for themselves. That's why I tried
+        to keep these text blocks brief. For this map, however, I will describe
+        it a bit more before showing it.
+      </p>
+      <p>
+        I decided to add interactivity to the previous cartogram, as it's
+        somewhat unclear which country is which. This was an opportunity to add
+        back the statistics from the other interactive country map. The
+        projection and legend had to change because the use of folium, but I
+        believe the overall map aesthetics have been preserved.
+      </p>
+      <p>
+        For this project, I have used every concept and technology I've learned
+        in this course and it was very fun. The final map is one I'm very proud
+        of and one I couldn't have imagined creating before taking this course
+        (I didn't even know cartograms were a thing). The map offers a clear
+        visual summary of the dataset's main findings, highlighting which
+        countries participate most actively in Erasmus+ and how their mobilities
+        are split between incoming and outgoing.
+      </p>
+      <p>
+        I hope this portfolio's story has been an engaging one. Here is the
+        final map:
+      </p>
+    </div>
+    <iframe
+      class="asset"
+      style="width: 60vw; height: 80vh; margin-bottom: 0"
+      src="./maps/erasmus_cartogram.html"
+    >
+    </iframe>
     <h2>Thank you for reading!</h2>
   </body>
 </html>
